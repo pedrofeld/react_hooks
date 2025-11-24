@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Navbar from "../../components/Navbar"
 
 export function Cronometro() {
     function Timer() {
@@ -22,6 +23,7 @@ export function Cronometro() {
 
     return (
     <>
+      <Navbar/>
       <button onClick={() => setShowTimer(!showTimer)}>
         {showTimer ? "Parar timer" : "Iniciar timer"}
       </button>

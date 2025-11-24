@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Navbar from "../../components/Navbar";
 
 export function Contador() {
     // useState: cria estado 'count' com valor inicial 0
@@ -12,6 +13,7 @@ export function Contador() {
 
     return (
         <>
+            <Navbar/>
             <p>Você clicou {count} vezes</p>
             <button onClick={() => setCount(count + 1)}>
             Clique aqui
