@@ -11,6 +11,7 @@ export default function Navbar() {
             <li><a href="/contador">Contador</a></li>
             <li><a href="/cronometro">Cronômetro</a></li>
             <li><a href="/fatorial">Fatorial</a></li>
+            <li><a href="/listadetarefas">Lista de Tarefas</a></li>
           </ul>
         </nav>
       </Container>
