@@ -3,7 +3,7 @@ import { Contador } from '../paginas/Contador'
 import { Cronometro } from '../paginas/Cronometro'
 import { Home } from '../paginas/Home'
 import { Fatorial } from '../paginas/Fatorial'
-import { ListaDeTarefas } from '../paginas/ListaDeTarefas'
+import { ListaDeTarefasComPropriedades } from '../paginas/ListaDeTarefas'
 
 export const router = createBrowserRouter([
     {
@@ -24,6 +24,6 @@ export const router = createBrowserRouter([
     },
     {
         path: '/listadetarefas',
-        element: <ListaDeTarefas />,
+        element: <ListaDeTarefasComPropriedades />,
     },
 ])
