@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Navbar from "../../components/Navbar";
 
 function calcularFatorial(n: number): number {
@@ -9,7 +9,8 @@ function calcularFatorial(n: number): number {
 export function Fatorial() {
     const [numero, setNumero] = useState(5);
     const [contador, setContador] = useState(0);
-    const fatorial = calcularFatorial(numero);
+    // const fatorial = calcularFatorial(numero);
+    const fatorial = useMemo(() => calcularFatorial(numero), [numero]);
 
     return (
         <>
