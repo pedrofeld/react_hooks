@@ -11,6 +11,7 @@ export function Fatorial() {
     const [contador, setContador] = useState(0);
     // const fatorial = calcularFatorial(numero);
     const fatorial = useMemo(() => calcularFatorial(numero), [numero]);
+    // Estrutura do useMemo: const memorizedValue = useMemo(calculateValue, dependencies);
 
     return (
         <>
