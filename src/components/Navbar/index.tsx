@@ -14,6 +14,7 @@ export default function Navbar() {
             <li><a href="/listadetarefas">Lista de Tarefas</a></li>
             <li><a href="/hookpersonalizado">Hook Personalizado</a></li>
             <li><a href="/formulario">Formulário</a></li>
+            <li><a href="/mui">Aplicações MUI</a></li>
           </ul>
         </nav>
       </Container>

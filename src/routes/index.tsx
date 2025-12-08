@@ -6,6 +6,7 @@ import { Fatorial } from '../paginas/Fatorial'
 import { ListaDeTarefasComPropriedades } from '../paginas/ListaDeTarefas'
 import { HookPersonalizado } from '../paginas/HookPersonalizado'
 import { Formulario } from '../paginas/Formulario'
+import MUI from '../paginas/AplicacoesMUI'
 
 export const router = createBrowserRouter([
     {
@@ -35,5 +36,9 @@ export const router = createBrowserRouter([
     {
         path: '/formulario',
         element: <Formulario />,
+    },
+    {
+        path: '/mui',
+        element: <MUI />,
     },
 ])
