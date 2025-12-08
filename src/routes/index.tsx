@@ -5,6 +5,7 @@ import { Home } from '../paginas/Home'
 import { Fatorial } from '../paginas/Fatorial'
 import { ListaDeTarefasComPropriedades } from '../paginas/ListaDeTarefas'
 import { HookPersonalizado } from '../paginas/HookPersonalizado'
+import { Formulario } from '../paginas/Formulario'
 
 export const router = createBrowserRouter([
     {
@@ -30,5 +31,9 @@ export const router = createBrowserRouter([
     {
         path: '/hookpersonalizado',
         element: <HookPersonalizado />,
+    },
+    {
+        path: '/formulario',
+        element: <Formulario />,
     },
 ])
