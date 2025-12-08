@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import Navbar from "../../components/Navbar";
+import { Button } from "@mui/material";
 
 interface State {
     name: string
@@ -50,7 +51,7 @@ export function Formulario(){
                     <label htmlFor="">Email:</label>
                     <input type="text" name="email" value={state.email} onChange={handleChange} />
                 </div>
-                <button type="button" onClick={handleReset}>Reset</button>
+                <Button size="small" variant="outlined" color="error" onClick={handleReset}>Reset</Button>
             </form>
             <h3>Dados do formulário:</h3>
             <p>Nome: {state.name}</p>
