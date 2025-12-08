@@ -12,6 +12,8 @@ export function Home() {
                     <ul>
                         <li>Contador</li>
                         <li>Cronômetro</li>
+                        <li>Fatorial</li>
+                        <li>Lista de Tarefas</li>
                     </ul>
                     <p>Fique à vontade para utilizá-las conforme a sua necessidade.</p>
                     <p>Para navegar entre as aplicações, utilize o navbar.</p>
