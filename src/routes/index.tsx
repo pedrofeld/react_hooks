@@ -4,6 +4,7 @@ import { Cronometro } from '../paginas/Cronometro'
 import { Home } from '../paginas/Home'
 import { Fatorial } from '../paginas/Fatorial'
 import { ListaDeTarefasComPropriedades } from '../paginas/ListaDeTarefas'
+import { HookPersonalizado } from '../paginas/HookPersonalizado'
 
 export const router = createBrowserRouter([
     {
@@ -25,5 +26,9 @@ export const router = createBrowserRouter([
     {
         path: '/listadetarefas',
         element: <ListaDeTarefasComPropriedades />,
+    },
+    {
+        path: '/hookpersonalizado',
+        element: <HookPersonalizado />,
     },
 ])
