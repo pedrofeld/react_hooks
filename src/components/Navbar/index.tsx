@@ -1,6 +1,10 @@
 import { Wrapper, Container } from "./styles"
+import { IconButton } from '@mui/material';
+import { Brightness4, Brightness7 } from '@mui/icons-material';
+import { useThemeMode } from '../../Contextos/thema';
 
 export default function Navbar() { 
+  const { mode, toggleMode } = useThemeMode();
   return (
     <Wrapper>
       <Container>   
@@ -17,6 +21,9 @@ export default function Navbar() {
             <li><a href="/mui">Aplicações MUI</a></li>
           </ul>
         </nav>
+        <IconButton onClick={toggleMode} aria-label="toggle theme" sx={{color: "#ffffff"}}>
+          {mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+        </IconButton>
       </Container>
     </Wrapper>
   );
