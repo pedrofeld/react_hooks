@@ -2,11 +2,14 @@ import { Button, Container, IconButton, Paper, TextField, Typography } from '@mu
 import Grid from '@mui/material/Grid';
 import Navbar from '../../components/Navbar';
 import { Add, Delete, Favorite, FavoriteBorder, Search, ShoppingCart } from '@mui/icons-material';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { ThemeModeContext } from '../../Contextos/thema';
 // import { CssBaseline } from '@mui/material';
 
 export default function MUI() {
   const [isFavorite, setIsFavorite] = useState(false);
+  const { mode, toggleMode } = useContext(ThemeModeContext);
+
   return (
     <>
       <Navbar/>
@@ -31,6 +34,7 @@ export default function MUI() {
             sx={{
               marginTop: "20px"
             }}
+            onClick={() => { if (mode !== 'light') toggleMode(); }}
           >
             Tema light
           </Button>
@@ -40,8 +44,9 @@ export default function MUI() {
             sx={{
               marginLeft: "10px", 
               marginTop: "20px"
-            }
-          }>
+            }}
+            onClick={() => { if (mode !== 'dark') toggleMode(); }}
+            >
             Tema dark
           </Button>
         </Paper>
