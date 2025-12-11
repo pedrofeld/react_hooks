@@ -1,10 +1,12 @@
 import { Button, IconButton, TextField, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Navbar from '../../components/Navbar';
-import { Add, Delete, Favorite, Search, ShoppingCart } from '@mui/icons-material';
+import { Add, Delete, Favorite, FavoriteBorder, Search, ShoppingCart } from '@mui/icons-material';
+import { useState } from 'react';
 // import { CssBaseline } from '@mui/material';
 
 export default function MUI() {
+  const [isFavorite, setIsFavorite] = useState(false);
   return (
     <>
       <Navbar/>
@@ -48,8 +50,8 @@ export default function MUI() {
       </Button>
 
       <p>Ícone que serve de botão</p>
-      <IconButton size='large'>
-        <Favorite fontSize='large'/>
+      <IconButton size='large' onClick={() => setIsFavorite(!isFavorite)}>
+        {isFavorite ? <Favorite color="primary"/> : <FavoriteBorder />}
       </IconButton>
     </>
   );
