@@ -1,39 +1,56 @@
-import { Button, TextField, Typography } from '@mui/material';
+import { Button, IconButton, TextField, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
-// import { CssBaseline } from '@mui/material';
-
 import Navbar from '../../components/Navbar';
+import { Add, Delete, Favorite, Search, ShoppingCart } from '@mui/icons-material';
+// import { CssBaseline } from '@mui/material';
 
 export default function MUI() {
   return (
     <>
-        <Navbar/>
-        {/*<CssBaseline/>*/}
+      <Navbar/>
+      {/*<CssBaseline/>*/}
 
-        <Typography>Teste de texto</Typography>
+      <Typography>Teste de texto</Typography>
 
-        <TextField label="Nome" slotProps={{
-          input: {
-            sx: {
-              backgroundColor: "gray.200",
-              borderRadius: 6
-            },
+      <TextField label="Nome" slotProps={{
+        input: {
+          sx: {
+            backgroundColor: "gray.200",
+            borderRadius: 6
           },
-        }}/>
+        },
+      }}/>
 
-        <p>Grid:</p>
-        <Grid container spacing={2}>
-          <Grid size={{xs: 6, md: 8}}>
-            xs: 6, md: 8
-          </Grid>
-          <Grid size={{xs: 6, md: 4}}>
-            xs: 6, md: 4
-          </Grid>
+      <p>Grid:</p>
+      <Grid container spacing={2}>
+        <Grid size={{xs: 6, md: 8}}>
+          xs: 6, md: 8
         </Grid>
-        
-        <Button variant="contained" color="primary" sx={{ borderRadius: 8, backgroundColor: "secondary.light"}}>
-          Botão
-        </Button>
+        <Grid size={{xs: 6, md: 4}}>
+          xs: 6, md: 4
+        </Grid>
+      </Grid>
+      
+      <Button variant="contained" color="primary" sx={{ borderRadius: 8, backgroundColor: "secondary.light"}}>
+        Botão
+      </Button>
+
+      <p>Icons:</p>
+      <Search sx={{ fontSize: 50 }}/>
+      <ShoppingCart fontSize='large'/>
+
+      <p>Botão com ícone:</p>
+      <Button variant='contained' startIcon={<Add/>}>
+        Adicionar
+      </Button>
+      <Button variant='contained' endIcon={<Delete/>}>
+        Remover
+      </Button>
+
+      <p>Ícone que serve de botão</p>
+      <IconButton size='large'>
+        <Favorite fontSize='large'/>
+      </IconButton>
     </>
   );
 }
