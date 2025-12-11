@@ -1,4 +1,4 @@
-import { Button, IconButton, TextField, Typography } from '@mui/material';
+import { Button, Container, IconButton, Paper, TextField, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Navbar from '../../components/Navbar';
 import { Add, Delete, Favorite, FavoriteBorder, Search, ShoppingCart } from '@mui/icons-material';
@@ -11,6 +11,41 @@ export default function MUI() {
     <>
       <Navbar/>
       {/*<CssBaseline/>*/}
+
+      <p>Tema dark e light:</p>
+      <Container maxWidth="sm" sx={{marginTop: "50px", textAlign: "center"}}> 
+        <Typography variant='h1' color='primary'>
+          {" "}
+          Teste de tema
+        </Typography>
+        <Typography variant='h6' color='secondary'>
+          Teste de personalização do tema
+        </Typography>
+        <Paper sx={{padding: "20px", marginTop: "20px"}}>
+          <Typography variant='body1' color="textPrimary">
+            Esse é um Paper com fundo personalizado
+          </Typography>
+          <Button 
+            variant='contained' 
+            color='primary'
+            sx={{
+              marginTop: "20px"
+            }}
+          >
+            Tema light
+          </Button>
+          <Button 
+            variant='contained' 
+            color='secondary'
+            sx={{
+              marginLeft: "10px", 
+              marginTop: "20px"
+            }
+          }>
+            Tema dark
+          </Button>
+        </Paper>
+      </Container>
 
       <Typography>Teste de texto</Typography>
 
